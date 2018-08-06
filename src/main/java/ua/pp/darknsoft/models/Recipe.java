@@ -22,7 +22,7 @@ public class Recipe {
     private Difficulty difficulty;
     @Lob
     private Byte[] image;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval=true)
     private Notes notes;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients = new HashSet<>();
