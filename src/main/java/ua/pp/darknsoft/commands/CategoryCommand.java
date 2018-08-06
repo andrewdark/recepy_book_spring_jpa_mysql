@@ -1,14 +1,12 @@
 package ua.pp.darknsoft.commands;
 
-import ua.pp.darknsoft.models.Recipe;
-
 import java.util.HashSet;
 import java.util.Set;
 
 public class CategoryCommand {
     private Long id;
     private String description;
-    private Set<Recipe> recipes = new HashSet<>();
+    private Set<RecipeCommand> recipes = new HashSet<>();
 
     public CategoryCommand() {
     }
@@ -29,11 +27,11 @@ public class CategoryCommand {
         this.description = description;
     }
 
-    public Set<Recipe> getRecipes() {
+    public Set<RecipeCommand> getRecipes() {
         return recipes;
     }
 
-    public void setRecipes(Set<Recipe> recipes) {
+    public void setRecipes(Set<RecipeCommand> recipes) {
         this.recipes = recipes;
     }
 }

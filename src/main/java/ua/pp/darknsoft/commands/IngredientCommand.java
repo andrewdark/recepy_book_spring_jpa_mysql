@@ -1,16 +1,13 @@
 package ua.pp.darknsoft.commands;
 
-import ua.pp.darknsoft.models.Recipe;
-import ua.pp.darknsoft.models.UnitOfMeasure;
-
 import java.math.BigDecimal;
 
 public class IngredientCommand {
     private Long id;
     private String description;
     private BigDecimal amount;
-    private UnitOfMeasure uom;
-    private Recipe recipe;
+    private UnitOfMeasureCommand uom;
+    private RecipeCommand recipe;
 
     public IngredientCommand() {
     }
@@ -39,19 +36,19 @@ public class IngredientCommand {
         this.amount = amount;
     }
 
-    public UnitOfMeasure getUom() {
+    public UnitOfMeasureCommand getUom() {
         return uom;
     }
 
-    public void setUom(UnitOfMeasure uom) {
+    public void setUom(UnitOfMeasureCommand uom) {
         this.uom = uom;
     }
 
-    public Recipe getRecipe() {
+    public RecipeCommand getRecipe() {
         return recipe;
     }
 
-    public void setRecipe(Recipe recipe) {
+    public void setRecipe(RecipeCommand recipe) {
         this.recipe = recipe;
     }
 }

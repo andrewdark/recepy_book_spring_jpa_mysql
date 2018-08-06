@@ -1,9 +1,6 @@
 package ua.pp.darknsoft.commands;
 
-import ua.pp.darknsoft.models.Category;
 import ua.pp.darknsoft.models.Difficulty;
-import ua.pp.darknsoft.models.Ingredient;
-import ua.pp.darknsoft.models.Notes;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,9 +16,9 @@ public class RecipeCommand {
     private String directions;
     private Difficulty difficulty;
     private Byte[] image;
-    private Notes notes;
-    private Set<Ingredient> ingredients = new HashSet<>();
-    private Set<Category> categories = new HashSet<>();
+    private NotesCommand notes;
+    private Set<IngredientCommand> ingredients = new HashSet<>();
+    private Set<CategoryCommand> categories = new HashSet<>();
 
     public RecipeCommand() {
     }
@@ -106,27 +103,27 @@ public class RecipeCommand {
         this.image = image;
     }
 
-    public Notes getNotes() {
+    public NotesCommand getNotes() {
         return notes;
     }
 
-    public void setNotes(Notes notes) {
+    public void setNotes(NotesCommand notes) {
         this.notes = notes;
     }
 
-    public Set<Ingredient> getIngredients() {
+    public Set<IngredientCommand> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Set<Ingredient> ingredients) {
+    public void setIngredients(Set<IngredientCommand> ingredients) {
         this.ingredients = ingredients;
     }
 
-    public Set<Category> getCategories() {
+    public Set<CategoryCommand> getCategories() {
         return categories;
     }
 
-    public void setCategories(Set<Category> categories) {
+    public void setCategories(Set<CategoryCommand> categories) {
         this.categories = categories;
     }
 }

@@ -1,11 +1,9 @@
 package ua.pp.darknsoft.commands;
 
-import ua.pp.darknsoft.models.Recipe;
-
 public class NotesCommand {
     private Long id;
     private String recipeNotes;
-    private Recipe recipe;
+    private RecipeCommand recipe;
 
     public NotesCommand() {
     }
@@ -26,11 +24,11 @@ public class NotesCommand {
         this.recipeNotes = recipeNotes;
     }
 
-    public Recipe getRecipe() {
+    public RecipeCommand getRecipe() {
         return recipe;
     }
 
-    public void setRecipe(Recipe recipe) {
+    public void setRecipe(RecipeCommand recipe) {
         this.recipe = recipe;
     }
 }
