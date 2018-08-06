@@ -18,6 +18,17 @@ public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand> {
     @Autowired
     private IngredientToIngredientCommand ingredientConverter;
 
+    public RecipeToRecipeCommand() {
+    }
+
+    public RecipeToRecipeCommand(CategoryToCategoryCommand categoryToCategoryCommand,
+                                 IngredientToIngredientCommand ingredientToIngredientCommand,
+                                 NotesToNotesCommand notesToNotesCommand) {
+        this.categoryConverter = categoryToCategoryCommand;
+        this.notesConverter = notesToNotesCommand;
+        this.ingredientConverter = ingredientToIngredientCommand;
+    }
+
     @Nullable
     @Override
     public RecipeCommand convert(Recipe source) {
