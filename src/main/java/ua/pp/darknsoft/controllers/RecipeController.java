@@ -29,8 +29,14 @@ public class RecipeController {
 
     @GetMapping("/recipe/{id}/update")
     public String recipeUpdate(@PathVariable String id, Model model) {
-        model.addAttribute("recipe",recipeService.findCommandById(new Long(id)));
+        model.addAttribute("recipe", recipeService.findCommandById(new Long(id)));
         return "recipe/recipeform";
+    }
+
+    @GetMapping("/recipe/{id}/delete")
+    public String deleteById(@PathVariable String id) {
+        recipeService.deleteById(new Long(id));
+        return "redirect:/";
     }
 
     @PostMapping("recipe")
